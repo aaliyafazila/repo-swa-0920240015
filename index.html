@@ -22,7 +22,32 @@ box-shadow:0 2px 8px rgba(0,0,0,.1);
 h1{
 color:#1f4e79;
 }
+
+input, select, button{
+padding:10px;
+margin:5px 0;
+width:100%;
+}
+
+button{
+background:#1f4e79;
+color:white;
+border:none;
+cursor:pointer;
+border-radius:5px;
+}
+
+button:hover{
+background:#163a5a;
+}
+
+pre{
+background:#eee;
+padding:10px;
+margin-top:10px;
+}
 </style>
+
 </head>
 
 <body>
@@ -58,7 +83,25 @@ Sistem ini digunakan untuk menghitung estimasi biaya konsumsi kegiatan mahasiswa
 <li>Lengkap = Rp45.000</li>
 </ul>
 
+<hr>
+
+<h2>Hitung Estimasi Biaya</h2>
+
+<input id="jumlah" type="number" placeholder="Jumlah peserta">
+
+<select id="jenis">
+  <option value="snack">Snack</option>
+  <option value="makan">Makan</option>
+  <option value="lengkap">Lengkap</option>
+</select>
+
+<button onclick="hitung()">Hitung</button>
+
+<pre id="hasil">Hasil akan muncul di sini...</pre>
+
 </div>
+
+<script src="app.js"></script>
 
 </body>
 </html>
